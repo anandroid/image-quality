@@ -51,13 +51,14 @@ class Tid2013(tfds.core.GeneratorBasedBuilder):
         tid2013 = "http://www.ponomarenko.info/tid2013/tid2013.rar"
         extracted_path = manager.download_and_extract([tid2013])
         images_path = os.path.join(extracted_path[0], "tid2013")
+        print(images_path)
 
         return [
             tfds.core.SplitGenerator(
                 name=tfds.Split.TRAIN,
                 gen_kwargs={
                     "images_path": images_path,
-                    "labels": os.path.join(images_path, "mos.csv")
+                    "labels": os.path.join(images_path, "mos.txt")
                 },
             )
         ]
