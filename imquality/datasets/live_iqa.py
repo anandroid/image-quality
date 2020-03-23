@@ -70,7 +70,7 @@ class LiveIQA(tfds.core.GeneratorBasedBuilder):
                 "dmos_realigned_std": tf.float32,
             }),
             supervised_keys=SUPERVISED_KEYS,
-            homepage=URLS,
+            homepage=b'URLS',
             citation=CITATION,
             redistribution_info={
                 'license': LICENSE,
