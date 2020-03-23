@@ -5,7 +5,7 @@ import tensorflow_datasets.public_api as tfds
 
 from . import CHECKSUMS_PATH
 
-tfds.download.add_checksums_dir(CHECKSUMS_PATH)
+#tfds.download.add_checksums_dir(CHECKSUMS_PATH)
 
 CITATION = r"""
 @article{ponomarenko2015image,
