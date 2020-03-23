@@ -43,7 +43,7 @@ class Tid2013(tfds.core.GeneratorBasedBuilder):
                 "mos": tf.float32,
             }),
             supervised_keys=SUPERVISED_KEYS,
-            urls=URLS,
+            homepage=URLS,
             citation=CITATION,
         )
 
