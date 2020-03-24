@@ -87,11 +87,20 @@ class Tid2013(tfds.core.GeneratorBasedBuilder):
         with tf.io.gfile.GFile(labels) as f:
             lines = f.readlines()
 
+
         print("lines")
         print(lines)
 
+        print("images_path")
+        print(images_path)
+
+
         for image_id, line in enumerate(lines[1:]):
             values = line.split(",")
+            print("image id")
+            print(image_id)
+            print("line")
+            print(line)
             yield image_id, {
                 "distorted_image": os.path.join(images_path, values[0]),
                 "reference_image": os.path.join(images_path, values[1]),
