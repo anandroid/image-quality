@@ -31,6 +31,13 @@ then a number of distortion's type, and, finally, a number of distortion's level
 URLS = b'http://www.ponomarenko.info/tid2013.htm'
 SUPERVISED_KEYS = ("distorted_image", "mos")
 
+MANUAL_DOWNLOAD_INSTRUCTIONS = """\
+    You can download the images from
+    https://wiki.cancerimagingarchive.net/display/Public/CBIS-DDSM
+    Please look at the source file (cbis_ddsm.py) to see the instructions
+    on how to convert them into png (using dcmj2pnm).
+    """
+
 
 class Tid2013(tfds.core.GeneratorBasedBuilder):
     VERSION = tfds.core.Version("1.0.0")
