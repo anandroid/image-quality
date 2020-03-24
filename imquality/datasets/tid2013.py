@@ -50,8 +50,8 @@ class Tid2013(tfds.core.GeneratorBasedBuilder):
 
     def _split_generators(self, manager):
         tid2013 = "https://download844.mediafire.com/hd0m3bg8ifpg/3yv173a68nuy53a/tid2013.zip"
-        extracted_path = manager.download_and_extract([tid2013])
-        images_path = os.path.join("/home/anandkumar/tensorflow_datasets/","tid2013")
+        extracted_path = manager.manual_dir()
+        images_path = os.path.join(extracted_path[0],"tid2013")
         print("extracted_path")
         print(extracted_path)
         print("images path")
