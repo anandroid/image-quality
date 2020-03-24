@@ -71,6 +71,9 @@ class Tid2013(tfds.core.GeneratorBasedBuilder):
         with tf.io.gfile.GFile(labels) as f:
             lines = f.readlines()
 
+        print("lines")
+        print(lines)
+
         for image_id, line in enumerate(lines[1:]):
             values = line.split(",")
             yield image_id, {
