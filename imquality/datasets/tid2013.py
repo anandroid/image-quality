@@ -35,7 +35,12 @@ SUPERVISED_KEYS = ("distorted_image", "mos")
 class Tid2013(tfds.core.GeneratorBasedBuilder):
     VERSION = tfds.core.Version("1.0.0")
 
-    MANUAL_DOWNLOAD_INSTRUCTIONS=""
+    MANUAL_DOWNLOAD_INSTRUCTIONS = """\
+     You can download the images from
+     https://wiki.cancerimagingarchive.net/display/Public/CBIS-DDSM
+     Please look at the source file (cbis_ddsm.py) to see the instructions
+     on how to convert them into png (using dcmj2pnm).
+     """
 
     def _info(self):
         return tfds.core.DatasetInfo(
