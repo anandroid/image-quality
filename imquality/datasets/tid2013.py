@@ -102,7 +102,7 @@ class Tid2013(tfds.core.GeneratorBasedBuilder):
             print("line")
             print(line)
             yield image_id, {
-                "distorted_image": os.path.join(images_path, values[0]),
-                "reference_image": os.path.join(images_path, values[1]),
+                "distorted_image": os.path.join(os.path.join(images_path,"distorted_images"), values[0]),
+                "reference_image": os.path.join(os.path.join(images_path,"reference_images"), values[1]),
                 "mos": values[2],
             }
