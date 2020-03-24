@@ -67,7 +67,7 @@ class Tid2013(tfds.core.GeneratorBasedBuilder):
         tid2013 = "https://download844.mediafire.com/hd0m3bg8ifpg/3yv173a68nuy53a/tid2013.zip"
         #manager.manual_dir()
         extracted_path="/home/anandkumar/tensorflow_datasets/downloads/manual/"
-        images_path = os.path.join(extracted_path[0],"tid2013")
+        images_path = os.path.join(extracted_path,"tid2013")
         print("extracted_path")
         print(extracted_path)
         print("images path")
