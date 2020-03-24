@@ -8,6 +8,7 @@ from . import CHECKSUMS_PATH
 
 tfds.download.add_checksums_dir(CHECKSUMS_PATH)
 
+
 CITATION = r"""
 @article{ponomarenko2015image,
   title={Image database TID2013: Peculiarities, results and perspectives},
@@ -33,6 +34,8 @@ SUPERVISED_KEYS = ("distorted_image", "mos")
 
 class Tid2013(tfds.core.GeneratorBasedBuilder):
     VERSION = tfds.core.Version("1.0.0")
+
+    MANUAL_DOWNLOAD_INSTRUCTIONS=""
 
     def _info(self):
         return tfds.core.DatasetInfo(
